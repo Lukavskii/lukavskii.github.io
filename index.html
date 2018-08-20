@@ -1,1 +1,173 @@
-
+<!DOCTYPE html><html lang="ru" ng-app="cb">
+<!-- Mirrored from constructor.cooperblack.ru/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Aug 2018 13:36:34 GMT -->
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Мужские 
+браслеты на заказ из камня – создайте свой дизайн в онлайн-конструкторе браслетов Cooperblack! Только натуральные минералы. Доставка 
+бесплатная по РФ."><meta name="keywords" content="конструктор браслетов, мужские браслеты на заказ, сделать браслет на заказ, мужские браслеты 
+из камня на заказ, браслет на заказ из камня"><meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate"><title>Конструктор 
+браслетов, мужские браслеты на заказ из камня от CooperBlack</title><link rel="shortcut icon" type="image/png" 
+href="assets/59171d0fdc386687ef6c12743035057f.png"><link rel="stylesheet" 
+href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;amp;subset=cyrillic"><link rel="stylesheet" 
+href="../use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" 
+crossorigin="anonymous"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-123079467-1"></script><link 
+href="1.41852cbedc8f624aaf15.css" rel="stylesheet"><link href="main.41852cbedc8f624aaf15.css" rel="stylesheet"></head><body 
+ng-controller="CbCtrl" ng-cloak><div id="preloader"><div><span></span><span></span><span></span><span></span></div></div><div class="section 
+head"><div class="wrapper head__container"><div class="items head__items"><div class="item"><div class="logo"><div class="star"><img 
+src="assets/bf7577560db15001ccf53f4b3d9ceb97.png"></div></div><h1 class="head__title">конструктор браслетов</h1><div 
+class="head__subtitle"><p>ВЫБЕРИТЕ КАМНИ И ШАРМЫ ПОД СЕБЯ</p><p>И СОБЕРИТЕ ИХ В УНИКАЛЬНЫЙ БРАСЛЕТ</p></div><div class="button 
+head__button">начать сборку</div></div><div class="item"><a href="tel:+78003020328">8 800 302 0328 (звонок по России бесплатно)</a><a 
+href="mailto:info@cooperblack.ru">info@cooperblack.ru</a></div></div></div></div><section class="section sub"><div class="wrapper 
+sub__container"><div class="items sub__items"><div class="sub__gem"><img src="assets/485ba393b062f88ea89a6d01a686fa48.png"><p>НАТУРАЛЬНЫЕ 
+КАМНИ</p></div><div class="sub__gem"><img src="assets/76c54b301880defeda2ffc1c14d28bad.png"><p>ДОСТАВКА ПО ВСЕЙ РОССИИ</p></div><div 
+class="sub__gem"><img src="assets/6cb0a3e92266098f5a7e0234d59ad970.png"><p>РУЧНАЯ СБОРКА</p></div></div></div></section><div 
+class="content__constructor"><div class="wrapper"><div class="constructor__params"><div class="nav"><div class="nav-items"><div 
+ng-repeat="(key, value) in nav.items track by $index"><input ng-model="$parent.view" ng-value="key" id="nav-{{$index}}" type="radio"><label 
+for="nav-{{$index}}" ng-click="value.click($event)"><span>{{value}}</span><i class="fas fa-chevron-right"></i></label></div></div><div 
+class="constructor__price"><p>Стоимость</p><span>= {{price}} Р</span><br><button data-popup="order"><i class="fas 
+fa-shopping-bag"></i><span>Заказать</span></button><button ng-click="clearLayout()"><i class="fas 
+fa-undo"></i><span>Сбросить</span></button><button data-popup="tutorial"><i class="far fa-play-circle"></i><span>Как 
+собрать</span></button></div></div><div class="view"><div class="constructor__param constructor__coverages" ng-show="view === 
+'coverages'"><h2>Обхват запястья (см)</h2><button ng-click="view = ''"><i class="fas fa-times"></i></button><p ng-show="tutorial"><span>Шаг 
+1</span>Измерьте диаметр вашего запястья и выберите необходимый размер браслета</p><div><div ng-repeat="wrist in coverages track by 
+$index"><input ng-model="$parent.coverage" ng-value="wrist" id="wrist{{$index}}" type="radio"><label 
+for="wrist{{$index}}">{{wrist}}</label></div></div></div><div class="constructor__param constructor__diameters" ng-show="view === 
+'diameters'"><h2>Диаметр бусины (мм)</h2><button ng-click="view = ''"><i class="fas fa-times"></i></button><p ng-show="tutorial"><span>Шаг 
+2</span>Выберите величину бусин для вашего браслета</p><div><div ng-repeat="param in diameters track by $index"><input 
+ng-model="$parent.diameter" ng-value="param" id="param{{$index}}" type="radio"><label 
+for="param{{$index}}">{{param}}</label></div></div></div><div class="constructor__param constructor__beads" ng-show="view === 
+'beads'"><h2>Камни</h2><button ng-click="view = ''"><i class="fas fa-times"></i></button><span ng-click="filter.active = true" 
+ng-class="{active: filter.active}"><span>Фильтр</span><i class="fas fa-chevron-right"></i></span><p ng-show="tutorial"><span>Шаг 
+3</span>Выбирайте и комбинируйте бусы из любимого камня</p><div><div ng-repeat="bead in beads | beadsFilter:filter.current track by $index" 
+ng-hide="bead.code === 'blank'" ng-mouseenter="$parent.description = bead" ng-mouseleave="$parent.description = undefined"><input 
+ng-model="$parent.brush" ng-value="bead" id="bead{{$index}}" type="radio"><label for="bead{{$index}}"><img 
+ng-src="{{bead.img}}"><span>{{bead.info.label}}</span></label></div></div></div><div class="constructor__param constructor__charms" 
+ng-show="view === 'charms'"><h2>Шармы</h2><button ng-click="view = ''"><i class="fas fa-times"></i></button><p ng-show="tutorial"><span>Шаг 
+4</span>Выберите шармы по вашему вкусу или стилю</p><div><div ng-repeat="charm in charms track by $index" ng-mouseenter="$parent.description = 
+charm" ng-mouseleave="$parent.description = undefined"><input ng-model="$parent.brush" ng-value="charm" id="charm{{$index}}" 
+type="radio"><label for="charm{{$index}}"><img ng-src="{{charm.img}}"><span>{{charm.info.label}}</span></label></div></div></div><div 
+class="constructor__param constructor__spacers" ng-show="view === 'spacers'"><h2>Спейсеры</h2><button ng-click="view = ''"><i class="fas 
+fa-times"></i></button><p ng-show="tutorial"><span>Шаг 4</span>Выберите шармы по вашему вкусу или стилю</p><div><div ng-repeat="spacer in 
+spacers track by $index" ng-mouseenter="$parent.description = spacer" ng-mouseleave="$parent.description = undefined"><input 
+ng-model="$parent.brush" ng-value="spacer" id="spacer{{$index}}" type="radio"><label for="spacer{{$index}}"><img 
+ng-src="{{spacer.img}}"><span>{{spacer.info.label}}</span></label></div></div></div><div class="constructor__param constructor__templates" 
+ng-show="view === 'templates'"><h2>Шаблоны</h2><button ng-click="view = ''"><i class="fas fa-times"></i></button><div><div ng-repeat="template 
+in templates track by $index" ng-mouseenter="$parent.description = template" ng-mouseleave="$parent.description = undefined"><button 
+ng-click="applyTemplate(template)"><img ng-src="{{template.img}}"><span>{{template.info.label}}</span></button></div></div></div></div><div 
+class="description" ng-show="description"><div><img ng-src="{{description.img}}"><div ng-show="view === 'beads'" ng-repeat="diameter in 
+diameters track by $index" ng-class="{active: $parent.diameter === 
+diameter}"><span>{{diameter}}мм</span><div></div><span>{{description.price[diameter]}}Р</span></div><div class="active" ng-show="view === 
+'charms' || view === 'templates'"><span>{{description.price}}Р</span></div></div><h3>{{description.info.label}}</h3><p 
+ng-show="description.info.scopes"><span>Сферы:</span>{{description.info.scopes | resolveFilter:filters.scopes}}</p><p 
+ng-show="description.info.zodiacs"><span>Знаки зодиака:</span>{{description.info.zodiacs | resolveFilter:filters.zodiacs}}</p><p 
+ng-show="description.info.chakras"><span>Чакры:</span>{{description.info.chakras | resolveFilter:filters.chakras}}</p><p 
+ng-show="description.info.elements"><span>Стихии:</span>{{description.info.elements | resolveFilter:filters.elements}}</p><p 
+ng-show="description.info.description"><span>Описание:</span>{{description.info.description}}</p></div><div class="filter" ng-show="view === 
+'beads' &amp;&amp; filter.active"><h2>Фильтр</h2><button ng-click="filter.active = false"><i class="fas 
+fa-times"></i></button><div><div><h3>Сферы:</h3><p ng-repeat="(key, value) in filters.scopes track by $index"><input type="checkbox" 
+ng-model="filter.temp.scopes[key]" ng-change="changeFilter(key)" id="scope-{{$index}}"><label 
+for="scope-{{$index}}">{{value}}</label></p></div><div><h3>Знаки зодиака:</h3><p ng-repeat="(key, value) in filters.zodiacs track by 
+$index"><input type="checkbox" ng-model="filter.temp.zodiacs[key]" ng-change="changeFilter(key)" id="zodiac-{{$index}}"><label 
+for="zodiac-{{$index}}">{{value}}</label></p></div><div><h3>Чакры:</h3><p ng-repeat="(key, value) in filters.chakras track by $index"><input 
+type="checkbox" ng-model="filter.temp.chakras[key]" ng-change="changeFilter(key)" id="chakra-{{$index}}"><label 
+for="chakra-{{$index}}">{{value}}</label></p></div><div><h3>Стихии:</h3><p ng-repeat="(key, value) in filters.elements track by $index"><input 
+type="checkbox" ng-model="filter.temp.elements[key]" ng-change="changeFilter(key)" id="element-{{$index}}"><label 
+for="element-{{$index}}">{{value}}</label></p></div></div></div></div><div class="constructor__layout" ng-style="arrangeLayout()"><div 
+ng-repeat="element in layout.elements track by $index" ng-style="arrangeElement(element, $index)"><img ng-src="{{getElementImage(element)}}" 
+ng-style="arrangeImage(element)"><button ng-click="assignElement(element)" ng-style="arrangeButton(element)"></button></div></div></div><div 
+class="constructor__popup"><div><button><i class="fas fa-times"></i></button><h2>Оформление заказа</h2><form><label for="formName">Ваше 
+имя:</label><input id="formName" type="text" name="name"><label for="formPhone">Ваш телефон:</label><input id="formPhone" type="text" 
+name="phone"><div><p>Стоимость заказа:
+<span>{{price}} P</span></p><button type="submit">Оформить заказ</button></div><input type="hidden" name="mainProduct" value="CooperBlack 
+Constructor"><input type="hidden" name="mainProductPrice" value="{{price}} руб"><input type="hidden" name="comment" 
+value="{{link}}"></form></div></div></div><section class="section video"><div class="wrapper video__container"><div class="items 
+video__items"><div class="item"><h2 class="section__title video__title">КАК МЫ СОЗДАЕМ ВАШИ БРАСЛЕТЫ</h2><a class="video__link" 
+href="https://www.youtube.com/watch?v=DqQsbElmVuE" target="_blank">СМОТРИТЕ ВИДЕО
+<i class="fas fa-play-circle"></i></a></div></div></div></section><section class="section gems"><div class="wrapper"><div class="items 
+gems__items"><div class="item gems__item_img"><img class="gems__img" src="assets/472c042848c7cba7318ddaaf54056820.jpg"></div><div class="item 
+gems__item"><h2 class="section__title gems__title">НАТУРАЛЬНЫЕ КАМНИ </h2><div class="section__text gems__text"><p>Браслеты изготавливаются 
+только из натуральных камней ведущих производителей. Мы ценим возможность сохранить экологию нашей планеты, поэтому в составе продуктов, 
+производимых нами, нет материалов, вредных для здоровья человека и планеты. В системе управления качеством компании все материалы, упаковка и 
+сам продукт подвергаются контролю качества. Поэтому мы не включаем в ассортимент синтетические и пластиковые 
+камни.</p></div></div></div></div></section><section class="section gift"><div class="items gift__items"><div class="item gift__item_left"><h2 
+class="section__title gift__title">СДЕЛАЙТЕ УНИКАЛЬНЫЙ ПОДАРОК ЛЮБИМЫМ </h2><div class="section__text gift__text"><p>Наши изделия одинаково 
+хорошо подходят женщинам и мужчинам. Умело подобранное стильное украшение выгодно подчеркнет отменный вкус своего владельца и его статус. 
+Купить такое изделие можно далеко не в каждом салоне. Соберите подарок сами, зная вкус и предпочтения близкого человека, друга или 
+коллеги</p></div></div><div class="item gift__item_right"><img 
+src="assets/514849e6edb387372bdfc1996e80f135.jpg"></div></div></section><section class="section gallery"><div class="wrapper 
+gallery__container"><h2 class="gallery__title">ГАЛЕРЕЯ БРАСЛЕТОВ</h2><div class="slider"><div class="slide"><img 
+src="assets/e60e0426a34ea0bbe3c435b62855ff7d.jpg"></div><div class="slide"><img src="assets/3c306a2503ff191c4b6cee9e00e793e7.jpg"></div><div 
+class="slide"><img src="assets/2f38197f8f7182edc622f8ba58995e95.jpg"></div><div class="slide"><img 
+src="assets/3a674eb5efd8feafb61be94dde04caf7.jpg"></div><div class="slide"><img src="assets/d5c7b885cb7aa6bbe474fafb42922d55.jpg"></div><div 
+class="slide"><img src="assets/b9c88af5d4b1cea84e0fb1e5ed51bbf8.jpg"></div><div class="slide"><img 
+src="assets/b67d2f003428b37cc4374f8393dd7eea.jpg"></div><div class="slide"><img 
+src="assets/894c62402c8fe41136e9aae3d462ec69.jpg"></div></div><div class="slider__nav"><div class="slide_nav"><img 
+src="assets/e60e0426a34ea0bbe3c435b62855ff7d.jpg"></div><div class="slide_nav"><img 
+src="assets/3c306a2503ff191c4b6cee9e00e793e7.jpg"></div><div class="slide_nav"><img 
+src="assets/2f38197f8f7182edc622f8ba58995e95.jpg"></div><div class="slide_nav"><img 
+src="assets/3a674eb5efd8feafb61be94dde04caf7.jpg"></div><div class="slide_nav"><img 
+src="assets/d5c7b885cb7aa6bbe474fafb42922d55.jpg"></div><div class="slide_nav"><img 
+src="assets/b9c88af5d4b1cea84e0fb1e5ed51bbf8.jpg"></div><div class="slide_nav"><img 
+src="assets/b67d2f003428b37cc4374f8393dd7eea.jpg"></div><div class="slide_nav"><img 
+src="assets/894c62402c8fe41136e9aae3d462ec69.jpg"></div></div></div></section><section class="section master"><div class="wrapper"><div 
+class="items master__items"><div class="item master__item_left"><img src="assets/ad87c62c770678874abb028f82789696.png"></div><div class="item 
+master__item master__item_right"><h2 class="section__title master__title">БРАСЛЕТЫ РУЧНОЙ РАБОТЫ ОТ МАСТЕРОВ ДЕЛА</h2><div 
+class="section__text master__text"><p>Главный капитал и ресурс развития нашей компании - это команда ярких профессионалов - творческих, 
+красивых, успешных людей. Каждый день нашей работы - это энергия, идея, качество и результат. Поэтому в нашей команде трудятся люди с горящими 
+глазами, искренние и всегда готовые помочь. Вместе мы делаем очень важное дело - создаем красивые вещи.</p></div><div class="sign"><div 
+class="sign__text"><div class="post">Креативный директор “Cooperblack”</div><div class="name">Александр 
+Смурыгин</div></div></div></div></div></div></section><section class="section insta"><div class="wrapper insta__container"><h2 
+class="insta__title">МЫ В ИНСТАГРАМ</h2><div class="items insta__items"></div></div></section><footer class="footer"><div class="wrapper"><div 
+class="items footer__items"><div class="item items footer__items"><div class="footer__column"><div class="strong">Конструктор</div><div 
+class="strong">браслетов</div><div class="strong">Cooperblack</div></div><div class="footer__column"><div class="strong">Социальные 
+сети</div><a href="https://vk.com/cooperblack_accessories">Vkontakte </a><a href="https://www.instagram.com/cooperblack_shop/">Instagram</a><a 
+href="https://www.facebook.com/cooperblackmen">Facebook</a><a 
+href="https://www.youtube.com/channel/UCLwRTMQFAAHkkXtwwchbE2Q?view_as=subscriber">Youtube</a><a 
+href="https://twitter.com/Cooperblack_men">Twitter</a></div><div class="footer__column"><div class="strong">Помощь</div><a href="#" 
+data-popup="confidentiality">Конфидециальность</a><a href="#" data-popup="requisites">Реквизиты</a><a href="#" 
+data-popup="delivery">Доставка</a></div></div><div class="item"><div class="footer__logo"><p class="footer__text">COOPERBLACK</p><span 
+class="footer__year">2012 - 2018</span></div></div></div></div></footer><div class="content__confidentiality"><div><button><img 
+src="assets/bf0edec01ba793992a9f051a526e687c.png"></button><h2>Политика конфиденциальности</h2><h3>Защита личных данных</h3><p>Для защиты 
+ваших личных данных у нас внедрен ряд средств защиты, которые действуют при введении, передаче или работе с вашими личными 
+данными.</p><h3>Разглашение личных сведений и передача этих сведений третьим лицам</h3><p>Ваши личные сведения могут быть разглашены нами 
+только в том случае это необходимо для: (а) обеспечения соответствия предписаниям закона или требованиям судебного процесса в нашем отношении 
+; (б) защиты наших прав или собственности (в) принятия срочных мер по обеспечению личной безопасности наших сотрудников или потребителей 
+предоставляемых им услуг, а также обеспечению общественной безопасности. Личные сведения, полученные в наше распоряжение при регистрации, 
+могут передаваться третьим организациям и лицам, состоящим с нами в партнерских отношениях для улучшения качества оказываемых услуг. Эти 
+сведения не будут использоваться в каких-либо иных целях, кроме перечисленных выше. Адрес электронной почты, предоставленный вами при 
+регистрации может использоваться для отправки вам сообщений или уведомлений об изменениях, связанных с вашей заявкой, а также рассылки 
+сообщений о происходящих в компании событиях и изменениях, важной информации о новых товарах и услугах и т.д. Предусмотрена возможность отказа 
+от подписки на эти почтовые сообщения.</p><h3>Использование файлов «cookie»</h3><p>Когда пользователь посещает веб-узел, на его компьютер 
+записывается файл «cookie» (если пользователь разрешает прием таких файлов). Если же пользователь уже посещал данный веб-узел, файл «cookie» 
+считывается с компьютера. Одно из направлений использования файлов «cookie» связано с тем, что с их помощью облегчается сбор статистики 
+посещения. Эти сведения помогают определять, какая информация, отправляемая заказчикам, может представлять для них наибольший интерес. Сбор 
+этих данных осуществляется в обобщенном виде и никогда не соотносится с личными сведениями пользователей.</p><p>Третьи стороны, включая 
+компании Google, показывают объявления нашей компании на страницах сайтов в Интернете. Третьи стороны, включая компанию Google, используют 
+cookie, чтобы показывать объявления, основанные на предыдущих посещениях пользователем наших веб-сайтов и интересах в веб-браузерах. 
+Пользователи могут запретить компаниям Google использовать cookie. Для этого необходимо посетить специальную страницу компании Google по этому 
+адресу: http://www.google.com/privacy/ads/</p><h3>Изменения в заявлении о соблюдении конфиденциальности</h3><p>Заявление о соблюдении 
+конфиденциальности предполагается периодически обновлять. При этом будет изменяться дата предыдущего обновления, указанная в начале документа. 
+Сообщения об изменениях в данном заявлении будут размещаться на видном месте наших веб-узлов</p><p>Осуществив заказ на нашем сайте какого-либо 
+товара, Вы соглашаетесь получить смс-уведомление о доставке купленного Вами товара в соответствующее почтовое отделение, согласно указанному 
+вами индексу.</p><p>Благодарим Вас за проявленный интерес к нашей системе!</p></div></div><div class="content__requisites"><div><button><img 
+src="assets/bf0edec01ba793992a9f051a526e687c.png"></button><h2>Реквизиты</h2><h3>ИНН 525691023338<br>ОГРНИП 314525631700075<br>ИП Подольский 
+Дмитрий Анатольевич</h3></div></div><div class="content__delivery"><div><button><img 
+src="assets/bf0edec01ba793992a9f051a526e687c.png"></button><h2>Доставка</h2><h3>Почта России</h3><p>Стоимость доставки от 350 руб. Подробности 
+доставки вашего заказа уточняйте у менеджера<br>Сроки доставки от 6 до 14 дней<br>Оплата наличными<br>Получение заказа в отделении связи Почты 
+России</p><h3>Cdek</h3><p>Стоимость доставки от 300 руб. Подробности доставки вашего заказа уточняйте у менеджера.<br>Сроки доставки уточняйте 
+у оператора<br>Оплата наличными при получении<br>Варианты доставки:<br>Со склада транспортной компании<br>Доставка курьером до 
+двери</p></div></div><div class="content__tutorial"><div><button><i class="fas fa-times"></i></button><h2>Инструкция по сборке</h2><iframe 
+width="560" height="315" src="https://www.youtube.com/embed/yrb4GdI1g9M?rel=0" frameborder="0" allow="autoplay; encrypted-media" 
+allowfullscreen></iframe></div></div><div class="content__callback__button" data-popup="callback"><i class="fas fa-phone"></i><p>Вам 
+перезвонить?</p></div><div class="content__callback__popup"><div><button><i class="fas fa-times"></i></button><h2>Обратный 
+звонок</h2>
+<form>
+<label for="formName">Ваше имя:</label><input id="formName" type="text" name="name"><label for="formPhone">Ваш 
+телефон:</label><input id="formPhone" type="text" name="phone"><div><button type="submit">Перезвоните мне</button></div><input type="hidden" 
+name="mainProduct" value="CooperBlack Constructor"><input type="hidden" name="mainProductPrice" value="0"><input type="hidden" name="comment" 
+value="Обратный звонок">
+</form>
+</div></div><script type="text/javascript" src="1.bundle.js"></script><script type="text/javascript" 
+src="bundle.js"></script></body><noscript><div><img src="https://mc.yandex.ru/watch/46841622" style="position:absolute; left:-9999px;" 
+alt=""></div></noscript><noscript><img height="1" width="1" style="display:none" 
+src="https://www.facebook.com/tr?id=1236687846468670&amp;ev=PageView&amp;noscript=1"></noscript>
+<!-- Mirrored from constructor.cooperblack.ru/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Aug 2018 13:37:52 GMT -->
+</html>
